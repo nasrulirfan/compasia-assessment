@@ -14,12 +14,18 @@ services:
   php:
     build:
       context: .
+      args:
+        HOST_USER_ID: 1000
+        HOST_GROUP_ID: 1000
+        HOST_USER_NAME: nasrulirfan
+        HOST_GROUP_NAME: nasrulirfan
       dockerfile: docker/php/Dockerfile
     networks:
       - internal
     volumes:
       - ./:/var/www/html/
       - ./docker/logs/php.log:/var/log/fpm-php.www.log
+    user: 1000:1000
     container_name: compasia-api
     expose:
       - "9000"
