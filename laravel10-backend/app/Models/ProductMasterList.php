@@ -23,4 +23,11 @@ class ProductMasterList extends Model
      */
     protected $primaryKey = 'product_id';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['product_id' , 'type', 'brand', 'model', 'capacity', 'quantity'];
+
 }

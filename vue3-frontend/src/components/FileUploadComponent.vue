@@ -2,7 +2,7 @@
 <template>
     <div class="card flex justify-content-center">
         <Toast />
-        <FileUpload mode="basic" name="demo[]" url="http://localhost:8080/api/product/upload" accept="xlsx/*" :maxFileSize="1000000" @upload="onUpload" :auto="true" chooseLabel="Browse" />
+        <FileUpload mode="basic" name="file" url="http://localhost:8080/api/product/upload" accept=".xlsx" :maxFileSize="1000000" @upload="onUpload" :auto="true" chooseLabel="Browse" />
     </div>
 </template>
 

@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('/product', ProductMasterListController::class);
+Route::post('/product/upload', [ProductMasterListController::class, 'uploadFile']);
