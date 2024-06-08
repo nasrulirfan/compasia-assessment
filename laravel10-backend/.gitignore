@@ -19,3 +19,4 @@ yarn-error.log
 /.vscode
 /docker/db-data
 /docker/logs
+/bruno-compasia

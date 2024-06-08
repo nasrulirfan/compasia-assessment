@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('product_master_list', function (Blueprint $table) {
-            $table->id();
+            $table->id('product_id');
             $table->string('type');
             $table->string('brand');
             $table->string('model');
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedInteger('quantity');  // Unsigned as quantity should not be negative
             $table->timestamps(); 
 
-                // Adding indexes for frequently searched columns
+            // Adding indexes for frequently searched columns
             $table->index('type');
             $table->index('brand');
             $table->index('model');
