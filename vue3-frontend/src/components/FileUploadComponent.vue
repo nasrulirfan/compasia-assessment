@@ -1,6 +1,6 @@
 
 <template>
-    <div class="card flex justify-content-center">
+    <div class="card flex justify-content-center" style="margin: 20px;">
         <Toast />
         <FileUpload mode="basic" name="file" :url="APISettings.baseURL + '/product/upload'" accept=".xlsx" :maxFileSize="2048000" @error="onError" @upload="onUpload" chooseLabel="Browse" />
     </div>

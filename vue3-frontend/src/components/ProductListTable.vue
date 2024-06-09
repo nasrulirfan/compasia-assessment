@@ -1,5 +1,6 @@
 <template>
-  <div class="card">
+  <div class="card" style="margin: 20px;">
+    <h3 style="margin: 20px;">Product Master List</h3> 
     <DataTable :value="products" lazy paginator :rows="10" removableSort tableStyle="min-width: 50rem" :first="first"
       @page="onPage($event)" @sort="onSort($event)" :loading="loading" :totalRecords="totalRecords">
       <Column field="product_id" header="Product ID" sortable style="width: 25%"></Column>
