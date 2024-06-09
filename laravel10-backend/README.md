@@ -11,3 +11,5 @@
 - Please install docker and docker compose
 - Run docker compose up -d --build for first time to run Laravel and MySQL
 
+## Notes
+- All docker configuration with Dockerfile are in /docker folder
