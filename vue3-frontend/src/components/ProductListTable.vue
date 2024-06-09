@@ -16,6 +16,7 @@
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import { ref, onMounted } from 'vue';
+import { APISettings } from '@/api/config.js';
 
 onMounted(async () => {
   loading.value = true;
@@ -56,7 +57,7 @@ const loadData = async (event) => {
   const sortField = lazyParams.value.sortField || 'product_id';
 
   try {
-    const response = await fetch(`http://localhost:8080/api/product?page=${currentPage.value + 1}&sort_field=${sortField}&sort_order=${sortDirection}`);
+    const response = await fetch(APISettings.baseURL + `/product?page=${currentPage.value + 1}&sort_field=${sortField}&sort_order=${sortDirection}`);
     const data = await response.json();
     products.value = data.data;
     totalRecords.value = data.total;

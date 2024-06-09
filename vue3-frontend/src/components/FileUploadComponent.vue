@@ -2,13 +2,14 @@
 <template>
     <div class="card flex justify-content-center">
         <Toast />
-        <FileUpload mode="basic" name="file" url="http://localhost:8080/api/product/upload" accept=".xlsx" :maxFileSize="2048000" @error="onError" @upload="onUpload" chooseLabel="Browse" />
+        <FileUpload mode="basic" name="file" :url="APISettings.baseURL + '/product/upload'" accept=".xlsx" :maxFileSize="2048000" @error="onError" @upload="onUpload" chooseLabel="Browse" />
     </div>
 </template>
 
 <script setup>
 import Toast from 'primevue/toast';
 import FileUpload from 'primevue/fileupload';
+import { APISettings } from '@/api/config.js';
 
 import { useToast } from "primevue/usetoast";
 const toast = useToast();

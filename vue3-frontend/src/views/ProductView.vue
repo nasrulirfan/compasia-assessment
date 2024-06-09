@@ -6,8 +6,8 @@
   </template>
   
   <script>
-  import FileUploadComponent from '../components/FileUploadComponent.vue';
-  import ProductListTable from '../components/ProductListTable.vue';
+  import FileUploadComponent from '@/components/FileUploadComponent.vue';
+  import ProductListTable from '@/components/ProductListTable.vue';
   
   export default {
     components: {
