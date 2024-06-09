@@ -36,7 +36,7 @@ class ProductMasterListController extends Controller
     public function uploadFile(Request $request)
     {   
         $validated = $request->validate([
-            'file' => 'required|mimes:xlsx|max:2048',
+            'file' => 'required|mimes:xlsx|max:10000',
         ]);
 
         $file = $validated['file'];
