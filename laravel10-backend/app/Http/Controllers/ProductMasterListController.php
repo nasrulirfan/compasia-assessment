@@ -13,7 +13,7 @@ class ProductMasterListController extends Controller
      */
     public function index()
     {
-        return ProductMasterList::all();
+        return ProductMasterList::paginate(10);
     }
 
     public function uploadFile(Request $request)
@@ -28,53 +28,5 @@ class ProductMasterListController extends Controller
         ProcessProduct::dispatch($fileName);
 
         return response()->json(['message' => 'File uploaded successfully.']);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(ProductMasterList $productMasterList)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(ProductMasterList $productMasterList)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, ProductMasterList $productMasterList)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(ProductMasterList $productMasterList)
-    {
-        //
     }
 }
